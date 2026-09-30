@@ -1,0 +1,181 @@
+/* Define as cores e a fonte usadas no site */
+:root {
+    font-family: Arial, sans-serif;
+    color: #24332b;
+    background-color: #f4f7f2;
+  }
+  
+  /* Faz os tamanhos incluírem bordas e espaçamentos */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Remove a margem padrão e define o tamanho mínimo da página */
+  body {
+    margin: 0;
+    min-width: 320px;
+  }
+  
+  /* Dá cor e espaço ao cabeçalho */
+  header {
+    padding: 32px 20px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #286344;
+  }
+  
+  /* Ajusta o tamanho do título principal */
+  header h1 {
+    margin: 0 0 10px;
+    font-size: 2rem;
+  }
+  
+  /* Remove a margem extra do texto de apresentação */
+  header > p {
+    margin: 0;
+  }
+  
+  /* Limita a largura da imagem e centraliza o conjunto */
+  .imagem-destaque {
+    max-width: 700px;
+    margin: 24px auto 0;
+  }
+  
+  /* Faz a imagem caber no espaço e arredonda seus cantos */
+  .imagem-destaque img {
+    display: block;
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  /* Estiliza a legenda abaixo da imagem */
+  .imagem-destaque figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+  }
+  
+  /* Centraliza o conteúdo e limita a largura para facilitar a leitura */
+  main {
+    width: min(100% - 32px, 760px);
+    margin: 32px auto;
+  }
+  
+  /* Estiliza cada seção, como o formulário e o mural */
+  section {
+    margin-bottom: 24px;
+    padding: 24px;
+    background-color: #ffffff;
+    border: 1px solid #d8e2d9;
+    border-radius: 12px;
+  }
+  
+  /* Espaça e colore os títulos das seções */
+  section h2 {
+    margin-top: 0;
+    color: #286344;
+  }
+  
+  /* Organiza os campos do formulário em uma coluna */
+  form {
+    display: grid;
+    gap: 16px;
+  }
+  
+  /* Coloca o nome do campo acima da caixa de preenchimento */
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+  }
+  
+  /* Dá o mesmo estilo aos campos do formulário */
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px 12px;
+    color: #24332b;
+    background-color: #ffffff;
+    border: 1px solid #9eaea1;
+    border-radius: 6px;
+    font: inherit;
+  }
+  
+  /* Permite aumentar a caixa de descrição para baixo */
+  textarea {
+    resize: vertical;
+  }
+  
+  /* Destaca o campo que está selecionado */
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: 3px solid #b9dfc7;
+    border-color: #286344;
+  }
+  
+  /* Estiliza o botão de cadastro */
+  button {
+    padding: 12px 18px;
+    color: #ffffff;
+    background-color: #286344;
+    border: 0;
+    border-radius: 6px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Muda a cor do botão quando o mouse passa por cima */
+  button:hover {
+    background-color: #1d4d33;
+  }
+  
+  /* Estiliza a mensagem que aparece quando o mural está vazio */
+  #mensagem-vazia {
+    color: #59685d;
+  }
+  
+  /* Dá espaço e uma linha divisória para cada ação do mural */
+  .ficha-acao {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #d8e2d9;
+  }
+  
+  /* Ajusta o título de cada ficha do mural */
+  .ficha-acao h3 {
+    margin: 0 0 8px;
+    color: #286344;
+  }
+  
+  /* Ajusta os parágrafos das fichas do mural */
+  .ficha-acao p {
+    margin: 6px 0;
+  }
+  
+  /* Estiliza o rodapé */
+  footer {
+    padding: 18px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #24332b;
+  }
+  
+  /* Ajusta os espaços em telas estreitas, como celulares */
+  @media (max-width: 480px) {
+    header {
+      padding: 26px 16px;
+    }
+  
+    header h1 {
+      font-size: 1.6rem;
+    }
+  
+    section {
+      padding: 18px;
+    }
+  }
+  

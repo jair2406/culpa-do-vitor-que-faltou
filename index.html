@@ -10,19 +10,29 @@
   <!-- O texto que aparece na aba do navegador -->
   <title>Mural de Ações do Bairro</title>
 
-  <!-- Carrega o arquivo que vai cuidar da aparência do site -->
+  <!-- Carrega o arquivo que cuida da aparência do site -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Carrega o arquivo que vai cuidar das ações do site -->
+  <!-- Carrega o arquivo JavaScript depois que o HTML for lido -->
   <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Cabeçalho com o nome e a apresentação do projeto -->
+  <!-- Cabeçalho com o nome, a apresentação e a imagem do projeto -->
   <header>
     <h1>Mural de Ações do Bairro</h1>
+
     <p>
       Um registro das ações realizadas pelos moradores da Vila Nova.
     </p>
+
+    <!-- Mostra uma imagem ilustrativa de uma ação comunitária -->
+    <figure class="imagem-destaque">
+      <img
+        src="acoes-vila-nova.png"
+        alt="Ilustração de moradores limpando juntos uma praça do bairro"
+      >
+      <figcaption>Imagem ilustrativa de uma ação comunitária</figcaption>
+    </figure>
   </header>
 
   <main>
@@ -96,7 +106,7 @@
           ></textarea>
         </div>
 
-        <!-- O JavaScript vai usar este botão para cadastrar a ficha -->
+        <!-- O JavaScript usará este botão para cadastrar a ficha -->
         <button type="submit">Cadastrar ação</button>
       </form>
     </section>
