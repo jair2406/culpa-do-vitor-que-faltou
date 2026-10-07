@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #1e2220;
+  color: #e3eae5;
+  line-height: 1.6;
+}
+
+header {
+  padding: 20px;
+  background-color: #171b19;
+  border-bottom: 2px solid #252b28;
+}
+
+.linha-superior-header {
+  max-width: 1200px;
+  margin: 0 auto 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+}
+
+.titulos-header h1 {
+  font-size: 2rem;
+  color: #62b189;
+  margin-bottom: 5px;
+}
+
+.titulos-header p {
+  font-size: 1rem;
+  color: #a3b8ac;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.linha-superior-header img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #38423d;
+  background-color: #ffffff;
+  filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.3));
+}
+
+.logo-esquerda { order: 1; }
+.titulos-header { order: 2; }
+.logo-direita { order: 3; }
+
+@media (min-width: 768px) {
+  .linha-superior-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .titulos-header {
+    flex: 1;
+  }
+}
+
+.imagem-destaque {
+  max-width: 450px;
+  margin: 0 auto;
+  background: #252b28;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #2f3733;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.imagem-destaque img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  opacity: 0.9;
+}
+
+.imagem-destaque figcaption {
+  font-size: 0.85rem;
+  color: #8fa095;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+main {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section {
+  background: #252b28;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #2f3733;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+section h2 {
+  font-size: 1.5rem;
+  color: #62b189;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #2f3733;
+  padding-bottom: 8px;
+}
+
+#mural-acoes {
+  background-color: #1a1e1c;
+  border: 2px dashed #38423d;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#mensagem-vazia {
+  color: #7d8f84;
+  font-style: italic;
+}
+
+form div {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: #cdd8d1;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #38423d;
+  border-radius: 8px;
+  background-color: #1a1e1c;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #e3eae5;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4b9b72;
+  background-color: #1e2321;
+}
+
+select option {
+  background-color: #252b28;
+  color: #e3eae5;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #4b9b72;
+  color: #141816;
+  border: none;
+  padding: 14px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button[type="submit"]:hover {
+  background-color: #62b189;
+}
+
+button[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+.container-botao-navegacao {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-navegacao {
+  display: inline-block;
+  background-color: #4b9b72;
+  color: #141816;
+  text-decoration: none;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-navegacao:hover {
+  background-color: #62b189;
+}
+
+.btn-navegacao:active {
+  transform: scale(0.98);
+}
+
+.btn-voltar {
+  display: inline-block;
+  color: #62b189;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid #38423d;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-voltar:hover {
+  background-color: #1a1e1c;
+  border-color: #4b9b72;
+}
+
+footer {
+  margin-top: 60px;
+  background-color: #171b19;
+  border-top: 2px solid #252b28;
+  padding: 25px 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.95rem;
+  color: #a3b8ac;
+  font-weight: 500;
+}
