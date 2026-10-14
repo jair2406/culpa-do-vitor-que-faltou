@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registrar Nova Ação - Mural do Bairro</title>
+  <title>Registrar Nova Ação - Mural do Bairro | P.I.A.S. 2026</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
+
   <header>
+    <div class="banner-top-pias">
+      <span>Feira de Negócios & Empreendedorismo — P.I.A.S. 2026</span>
+      <span>Foco: Responsabilidade Social & Sustentabilidade</span>
+    </div>
     <div class="linha-superior-header">
       <img src="imagens/colegio-civico-militar-do-parana-logo.png" alt="Logo Colégio Cívico-Militar do Paraná" class="logo-esquerda">
       <div class="titulos-header">
@@ -22,42 +27,53 @@
     </div>
   </header>
 
-  <main>
-    <section aria-labelledby="titulo-formulario">
+  <main class="container">
+    <section class="card" aria-labelledby="titulo-formulario">
       <h2 id="titulo-formulario">Cadastrar uma ação</h2>
       <form id="formulario-acao">
-        <div>
+        <div class="form-group">
           <label for="titulo-acao">Título da ação</label>
           <input type="text" id="titulo-acao" name="titulo" required>
         </div>
-        <div>
-          <label for="categoria-acao">Categoria</label>
-          <select id="categoria-acao" name="categoria" required>
-            <option value="">Escolha uma categoria</option>
-            <option value="Ambiental">Ambiental</option>
-            <option value="Social">Social</option>
-            <option value="Educação">Educação</option>
-            <option value="Saúde">Saúde</option>
-          </select>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="categoria-acao">Categoria</label>
+            <select id="categoria-acao" name="categoria" required>
+              <option value="">Escolha uma categoria</option>
+              <option value="Ambiental">Ambiental</option>
+              <option value="Social">Social</option>
+              <option value="Educação">Educação</option>
+              <option value="Saúde">Saúde</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="local-acao">Local</label>
+            <input type="text" id="local-acao" name="local" required>
+          </div>
         </div>
-        <div>
-          <label for="local-acao">Local</label>
-          <input type="text" id="local-acao" name="local" required>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="responsavel-acao">Responsável</label>
+            <input type="text" id="responsavel-acao" name="responsavel" required>
+          </div>
+
+          <div class="form-group">
+            <label for="participantes-acao">Quantas pessoas participaram?</label>
+            <input type="number" id="participantes-acao" name="participantes" min="1" step="1" required>
+          </div>
         </div>
-        <div>
-          <label for="responsavel-acao">Responsável</label>
-          <input type="text" id="responsavel-acao" name="responsavel" required>
-        </div>
-        <div>
-          <label for="participantes-acao">Quantas pessoas participaram?</label>
-          <input type="number" id="participantes-acao" name="participantes" min="1" step="1" required>
-        </div>
-        <div>
+
+        <div class="form-group">
           <label for="descricao-acao">O que foi feito?</label>
           <textarea id="descricao-acao" name="descricao" rows="5" required></textarea>
         </div>
-        <button type="submit">Cadastrar ação</button>
+
+        <button type="submit" class="btn-primary">Cadastrar ação</button>
       </form>
+
       <div class="container-botao-navegacao">
         <a href="index.html" class="btn-voltar">Voltar para o mural</a>
       </div>
@@ -65,7 +81,9 @@
   </main>
 
   <footer>
-    <p>Mural comunitário da Vila Nova</p>
+    <p>Projeto Desenvolvido para a Feira de Negócios P.I.A.S. 2026 | Foco em Sustentabilidade e Responsabilidade Social</p>
+    <p>Mural comunitário da Vila Nova — Colégio Cívico-Militar do Paraná</p>
   </footer>
+
 </body>
 </html>
