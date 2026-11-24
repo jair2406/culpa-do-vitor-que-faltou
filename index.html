@@ -1,129 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Define como os caracteres e acentos serão exibidos -->
   <meta charset="UTF-8">
-
-  <!-- Ajuda a página a funcionar bem em celulares e computadores -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- O texto que aparece na aba do navegador -->
   <title>Mural de Ações do Bairro</title>
-
-  <!-- Carrega o arquivo que cuida da aparência do site -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- Carrega o arquivo JavaScript depois que o HTML for lido -->
   <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Cabeçalho com o nome, a apresentação e a imagem do projeto -->
   <header>
-    <h1>Mural de Ações do Bairro</h1>
-
-    <p>
-      Um registro das ações realizadas pelos moradores da Vila Nova.
-    </p>
-
-    <!-- Mostra uma imagem ilustrativa de uma ação comunitária -->
-    <figure class="imagem-destaque">
-      <img
-        src="acoes-vila-nova.png"
-        alt="Ilustração de moradores limpando juntos uma praça do bairro"
-      >
-      <figcaption>Imagem ilustrativa de uma ação comunitária</figcaption>
-    </figure>
+    <div class="linha-superior-header">
+      <img src="imagens/colegio-civico-militar-do-parana-logo.png" alt="Logo Colégio Cívico-Militar do Paraná" class="logo-esquerda">
+      <div class="titulos-header">
+        <h1>Mural de Ações do Bairro</h1>
+        <p>Um registro das ações realizadas pelos moradores da Vila Nova.</p>
+      </div>
+      <img src="imagens/governo_estado.png" alt="Logo Governo do Estado" class="logo-direita">
+    </div>
+    <div class="imagem-destaque">
+      <img src="imagens/OIG2.YvLhU.uTkxg.jfif" alt="Ação Comunitária - Unidos pela Cidade">
+    </div>
   </header>
 
   <main>
-    <!-- Formulário para cadastrar uma nova ação -->
-    <section aria-labelledby="titulo-formulario">
-      <h2 id="titulo-formulario">Cadastrar uma ação</h2>
-
-      <form id="formulario-acao">
-        <div>
-          <label for="titulo-acao">Título da ação</label>
-          <input
-            type="text"
-            id="titulo-acao"
-            name="titulo"
-            required
-          >
-        </div>
-
-        <div>
-          <label for="categoria-acao">Categoria</label>
-          <select id="categoria-acao" name="categoria" required>
-            <option value="">Escolha uma categoria</option>
-            <option value="Ambiental">Ambiental</option>
-            <option value="Social">Social</option>
-            <option value="Educação">Educação</option>
-            <option value="Saúde">Saúde</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="local-acao">Local</label>
-          <input
-            type="text"
-            id="local-acao"
-            name="local"
-            required
-          >
-        </div>
-
-        <div>
-          <label for="responsavel-acao">Responsável</label>
-          <input
-            type="text"
-            id="responsavel-acao"
-            name="responsavel"
-            required
-          >
-        </div>
-
-        <div>
-          <label for="participantes-acao">
-            Quantas pessoas participaram?
-          </label>
-          <input
-            type="number"
-            id="participantes-acao"
-            name="participantes"
-            min="1"
-            step="1"
-            required
-          >
-        </div>
-
-        <div>
-          <label for="descricao-acao">O que foi feito?</label>
-          <textarea
-            id="descricao-acao"
-            name="descricao"
-            rows="5"
-            required
-          ></textarea>
-        </div>
-
-        <!-- O JavaScript usará este botão para cadastrar a ficha -->
-        <button type="submit">Cadastrar ação</button>
-      </form>
-    </section>
-
-    <!-- Área onde o JavaScript vai mostrar as ações cadastradas -->
     <section aria-labelledby="titulo-mural">
       <h2 id="titulo-mural">Ações realizadas</h2>
-
       <div id="mural-acoes">
-        <p id="mensagem-vazia">
-          Ainda não há ações cadastradas.
-        </p>
+        <p id="mensagem-vazia">Ainda não há ações cadastradas.</p>
+      </div>
+      <div class="container-botao-navegacao">
+        <a href="acao.html" class="btn-navegacao">Registrar uma ação</a>
       </div>
     </section>
   </main>
 
-  <!-- Rodapé simples do site -->
   <footer>
     <p>Mural comunitário da Vila Nova</p>
   </footer>
