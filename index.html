@@ -3,39 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mural de Ações do Bairro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+  <title>Mural de Ações do Bairro · Vila Nova</title>
 </head>
 <body>
   <header>
-    <div class="linha-superior-header">
-      <img src="colegio-civico-militar-do-parana-logo.png" alt="Logo Colégio Cívico-Militar do Paraná" class="logo-esquerda">
-      <div class="titulos-header">
-        <h1>Mural de Ações do Bairro</h1>
-        <p>Um registro das ações realizadas pelos moradores da Vila Nova.</p>
-      </div>
-      <img src="governo_estado.png" alt="Logo Governo do Estado" class="logo-direita">
-    </div>
-    <div class="imagem-destaque">
-      <img src="OIG2.YvLhU.uTkxg.jfif" alt="Ação Comunitária - Unidos pela Cidade">
-    </div>
+    <div class="cabecalho"><div class="wrap">
+      <img src="imagens/colegio-civico-militar-do-parana-logo.png" alt="Logo da escola">
+      <div class="marca"><strong>Mural de Ações do Bairro</strong><span>Vila Nova</span></div>
+      <img src="imagens/governo_estado.png" alt="Governo do Estado do Paraná">
+    </div></div>
+    <nav class="menu" aria-label="Principal"><div class="wrap">
+      <a href="index.html" aria-current="page">Mural</a>
+      <a href="acao.html" >Registrar ação</a>
+    </div></nav>
   </header>
+  <section class="hero"><div class="wrap">
+    <div class="texto">
+      <h1>As ações dos moradores da Vila Nova, reunidas em um só lugar</h1>
+      <p>Registre o que foi feito pelo bairro em meio ambiente, ação social, educação e saúde, e acompanhe o que os vizinhos já realizaram.</p>
+      <div class="acoes">
+        <a class="botao" href="acao.html">Registrar uma ação</a>
+        <a class="botao claro" href="#mural">Ver o mural</a>
+      </div>
+    </div>
+    <figure><img src="imagens/OIG2.YvLhU.uTkxg.jfif" alt="Morador da Vila Nova em uma rua ao entardecer, com uma sacola no ombro"></figure>
+  </div></section>
 
-  <main>
-    <section aria-labelledby="titulo-mural">
-      <h2 id="titulo-mural">Ações realizadas</h2>
-      <div id="mural-acoes">
-        <p id="mensagem-vazia">Ainda não há ações cadastradas.</p>
+  <main class="wrap">
+    <div class="indicadores">
+      <div><strong id="total-acoes">0</strong><span>ações registradas</span></div>
+      <div><strong id="total-pessoas">0</strong><span>pessoas envolvidas</span></div>
+      <div><strong id="total-categorias">0</strong><span>áreas de atuação</span></div>
+    </div>
+
+    <section class="bloco parede" id="mural" aria-labelledby="titulo-mural">
+      <div class="bloco-topo">
+        <div><h2 id="titulo-mural">Ações realizadas</h2><p>Mais recentes primeiro</p></div>
+        <div class="filtros" role="group" aria-label="Filtrar por categoria" id="filtros"></div>
       </div>
-      <div class="container-botao-navegacao">
-        <a href="acao.html" class="btn-navegacao">Registrar uma ação</a>
-      </div>
+      <div id="mural-acoes" aria-live="polite"></div>
+    </section>
+
+    <section class="bloco" aria-labelledby="titulo-impacto">
+      <div class="bloco-topo"><div><h2 id="titulo-impacto">Impacto do bairro</h2><p>Calculado a partir das ações registradas no mural</p></div></div>
+      <div class="impacto-cat" id="impacto-categorias"></div>
+    </section>
+
+    <section class="bloco" aria-labelledby="titulo-ods">
+      <div class="bloco-topo"><div><h2 id="titulo-ods">Objetivos de Desenvolvimento Sustentável</h2><p>As metas da ONU (Agenda 2030) que as ações do mural ajudam a cumprir</p></div></div>
+      <div class="lista-ods" id="lista-ods"></div>
+    </section>
+
+    <section class="bloco" aria-labelledby="titulo-como">
+      <div class="bloco-topo"><h2 id="titulo-como">Como participar</h2></div>
+      <ol class="passos">
+        <li><b>1</b><h3>Preencha o formulário</h3><p>Informe o título, o local, o responsável e quantas pessoas participaram.</p></li>
+        <li><b>2</b><h3>Descreva o que foi feito</h3><p>Conte em poucas linhas como a ação aconteceu.</p></li>
+        <li><b>3</b><h3>Veja no mural</h3><p>A ação aparece na lista e entra na contagem do bairro.</p></li>
+      </ol>
     </section>
   </main>
 
-  <footer>
+  <footer><div class="wrap">
+    <p>P.I.A.S. 2026 · Responsabilidade Social e Sustentabilidade</p>
     <p>Mural comunitário da Vila Nova</p>
-  </footer>
+  </div></footer>
 </body>
 </html>
